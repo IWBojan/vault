@@ -1,0 +1,27 @@
+//Polisaza authorize
+
+//Authorization response format:
+// {
+//   principalId: "identifier of the sender (e.g. userId)" //It will be logged in the Cloudwtch logs, so you can track it
+//   policyDocument: {
+//     {
+//       Version: "2012-10-17",
+//       Statement: [
+//         {
+//           Action: "execute-api:Invoke",
+//           Effect: "deny",
+//           Resource: "arn:aws:execute-api:us-east-1:784124119778:v4i6ij8h01/ESTestInvoke-stage/GET/"
+//         }
+//       ]
+//     }
+//   }
+// }
+
+exports.handler = async (event) => {
+    // TODO implement
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+    return response;
+};
